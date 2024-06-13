@@ -1,0 +1,57 @@
+/* font start */
+@font-face /*perintah untuk memanggil font eksternal*/
+{
+    font-family: 'Rubik_Glitch'; /*memberikan nama bebas untuk font*/
+    src: url('fonts/Rubik_Glitch/RubikGlitch-Regular.ttf');/*memanggil file font eksternalnya di folder nexa*/
+}
+h1{
+    font-family: 'Rubik_Glitch';
+}
+/* font end*/
+
+header{
+    background-color: #FF0088;
+    height: 50px;
+    font-size: 48;
+}
+li{
+    display: inline-block;
+    margin-left: 50px;
+}
+.head{
+    margin-right: 10px;
+    color: #fff;
+}
+
+li>svg{
+    width: 20px;
+}
+li>img{
+    width: 30px;
+}
+
+.box{
+    background-color: #202020;
+    height: 400px;
+    color: #fff;
+    margin-top: -20px;
+}
+.box1{
+    /* margin-left: 100px; */
+}
+
+.card{
+    width: 300px;
+    border: 1px solid #000;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.image{
+    background-color: #FF0088;
+    height: 200px;
+    font-size: 72px;
+    font-family: 'Rubik_Glitch';
+    text-align: center;
+}
