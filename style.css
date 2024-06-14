@@ -35,9 +35,10 @@ li>img{
     height: 400px;
     color: #fff;
     margin-top: -20px;
+    
 }
 .box1{
-    /* margin-left: 100px; */
+    display: inline;
 }
 
 .card{
@@ -46,6 +47,7 @@ li>img{
     padding: 10px;
     display: inline-block;
     margin: 10px;
+    
 }
 
 .image{
