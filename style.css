@@ -256,6 +256,11 @@ p.isi {
     border-radius: 30px;
     border: 1px solid #FF0088;
 }
+.subscribe>svg{
+    width: 20px;
+    margin-right: 10px;
+    fill: #fff;
+}
 /* end content 2 */
 
 /* footer */
