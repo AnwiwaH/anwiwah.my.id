@@ -1,15 +1,17 @@
 /* font start */
-@font-face /*perintah untuk memanggil font eksternal*/
-{
-    font-family: 'Rubik_Glitch'; /*memberikan nama bebas untuk font*/
-    src: url('fonts/Rubik_Glitch/RubikGlitch-Regular.ttf');/*memanggil file font eksternalnya di folder nexa*/
+/* font 1 */
+@font-face{
+    font-family: 'Rubik_Glitch';
+    src: url('fonts/Rubik_Glitch/RubikGlitch-Regular.ttf')
 }
 
+/* font 2.1 */
 @font-face {
     font-family: 'Poppinsb';
     src: url('fonts/Poppins/Poppins-Black.ttf');
 }
 
+/* font 2.2 */
 @font-face {
     font-family: 'Poppinsr';
     src: url('fonts/Poppins/Poppins-Regular.ttf');
@@ -34,7 +36,6 @@ footer {
 h1{
     font-family: 'Rubik_Glitch';
 }
-
 /* font end*/
 
 * {
@@ -73,7 +74,7 @@ li>svg{
 }
 
 .imgh {
-    width: 30px;
+    width: 50px;
 }
 
 ul li span {
