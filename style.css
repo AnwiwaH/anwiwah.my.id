@@ -4,45 +4,146 @@
     font-family: 'Rubik_Glitch'; /*memberikan nama bebas untuk font*/
     src: url('fonts/Rubik_Glitch/RubikGlitch-Regular.ttf');/*memanggil file font eksternalnya di folder nexa*/
 }
+
+@font-face {
+    font-family: 'Poppinsb';
+    src: url('fonts/Poppins/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Poppinsr';
+    src: url('fonts/Poppins/Poppins-Regular.ttf');
+}
+
+header,
+p.title {
+    font-family: 'Poppinsb';
+}
+
+.box {
+    font-family: 'Poppinsr';  
+}
+
 h1{
     font-family: 'Rubik_Glitch';
 }
+
 /* font end*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 100px;
+}
 
 header{
     background-color: #FF0088;
-    height: 50px;
     font-size: 48;
+    padding: 15px 0;
 }
-li{
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+ul, li{
     display: inline-block;
-    margin-left: 50px;
+    padding-top: 2px;
 }
+
 .head{
-    margin-right: 10px;
     color: #fff;
+}
+
+li {
+    margin-left: 35px;
 }
 
 li>svg{
     width: 20px;
 }
-li>img{
+
+.container img{
     width: 30px;
+}
+
+ul li span {
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .box{
     background-color: #202020;
     height: 400px;
     color: #fff;
-    margin-top: -20px;
-    
+    padding: 100px 0;   
 }
-.box1{
-    display: inline;
+
+p.title {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p.isi {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.column .button {
+    display: inline-block;
+}
+
+.button button {
+    padding: 10px 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.button .btn1 {
+    background-color: #FF0088;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    margin-right: 10px;
+}
+
+.button .btn2 {
+    background-color: #000;
+    border-radius: 10px;
+    border: 1px solid #FF0088;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+}
+
+.box-img img {
+    width: 450px;
+    margin-left: 80px;
+    position: absolute;
+    bottom: 40px;
+    right: 200px;
+}
+
+.center {
+    justify-content: space-between;
+}
+
+.mcontent {
+    margin-top: 80px;
 }
 
 .card{
-    width: 250px;
+    width: 350px;
     border: 1px solid #000;
     padding: 10px;
     display: inline-block;
