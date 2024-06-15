@@ -26,7 +26,8 @@ p.title,
 .box,
 .card p,
 .card button,
-.isi-u {
+.isi-u,
+footer {
     font-family: 'Poppinsr';
 }
 
@@ -114,8 +115,7 @@ p.isi {
 .button .btn1 {
     background-color: #FF0088;
     border-radius: 10px;
-    border: none;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    border: 1px solid #FF0088;
     margin-right: 10px;
     margin-bottom: 10px;
 }
@@ -124,7 +124,6 @@ p.isi {
     background-color: #000;
     border-radius: 10px;
     border: 1px solid #FF0088;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
 }
 
 .box-img img {
@@ -197,6 +196,12 @@ p.isi {
     margin: 10px 0;
 }
 
+.card button {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #202020;
+}
+
 .h2-u {
     font-size: 35px;
     color: #FF0088;
@@ -236,19 +241,65 @@ p.isi {
 }
 .button-n {
     display: inline-block;
-    margin: 15px auto;
+    margin: 15px auto 5px;
 }
 .subscribe {
     font-family: 'Poppinsb';
     text-align: center;
     color: white;
     background-color: #FF0088;
-    padding: 10px 40px;
+    padding: 10px 80px;
     border-radius: 30px;
-    border: none;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+    border: 1px solid #FF0088;
 }
 /* end content 2 */
+
+/* footer */
+.blok {
+    display: block;
+}
+
+footer {
+    background-color: #202020;
+    color: #fff;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+/* row 1 */
+.f-1 {
+    padding: 100px 0 40px;
+}
+
+.f-1 h3 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.padd {
+    padding: 70px 0 40px;
+}
+
+.p-05 {
+    padding: 5px 0;
+}
+/* end row 1 */
+
+/* row 2 */
+.textc {
+    text-align: center;
+}
+
+.s {
+    font-weight: 500;
+    font-size: 20px;
+    padding: 40px 0 70px;
+}
+/* end row 2 */
+/* end footer */
 
 /* for dekstop */
 @media (min-width: 768px) {
@@ -312,5 +363,9 @@ p.isi {
 
     .mcontent {
         margin-top: 120px;
+    }
+
+    .f-1 h3 {
+        font-size: 40px;
     }
 }
