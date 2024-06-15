@@ -69,6 +69,7 @@ li {
 
 li>svg{
     width: 20px;
+    fill:#fff;
 }
 
 .imgh {
@@ -199,7 +200,9 @@ p.isi {
 .card button {
     padding: 5px 10px;
     border-radius: 10px;
-    border: 1px solid #202020;
+    border: 3px solid #fff;
+     background-color: #000;
+     color: #fff;
 }
 
 .h2-u {
