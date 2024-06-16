@@ -58,6 +58,7 @@ header{
 ul, li{
     display: inline-block;
     padding-top: 2px;
+    margin-top: 5px;
 }
 
 .head{
@@ -200,6 +201,7 @@ p.isi {
     border-radius: 50%;
     background-color: gray;
     font-size: 20px;
+    user-select: none;
 }
 
 .page:hover {
