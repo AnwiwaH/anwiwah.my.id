@@ -44,6 +44,10 @@ h1{
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     margin: 0 100px;
 }
@@ -227,6 +231,10 @@ p.isi {
     margin: 10px 0;
 }
 
+.card .sml {
+    font-size: 45px;
+}
+
 .card button {
     padding: 5px 10px;
     border-radius: 10px;
@@ -351,14 +359,32 @@ footer p {
     text-align: center;
 }
 
-.textc li .yt {
+.textc li {
+    padding: 8px 10px 3px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.textc li .sosm {
     width: 25px;
 }
 
+.textc li.bg-s {
+    padding: 7px 8px 0;
+    position: relative;
+    bottom: -3px;
+}
+
+.textc li.yt-li {
+    padding: 8px 10px 1px;
+    position: relative;
+    bottom: -2px;
+}
+
 .textc li:hover {
-    background-color: unset;
+    background-color: #FF0088;
     svg {
-        fill: #FF0088;
+        fill: #000;
     }
 }
 
