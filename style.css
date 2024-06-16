@@ -44,6 +44,10 @@ h1{
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     margin: 0 100px;
 }
@@ -58,6 +62,7 @@ header{
 ul, li{
     display: inline-block;
     padding-top: 2px;
+    margin-top: 5px;
 }
 
 .head{
@@ -66,6 +71,15 @@ ul, li{
 
 li {
     margin-left: 35px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #000;
+    background-color: #FF0088;
+    svg {
+        fill: #000;
+    }
 }
 
 li>svg{
@@ -77,9 +91,16 @@ li>svg{
     width: 50px;
 }
 
+.imgh:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
 ul li span {
+    position: relative;
     margin-left: 10px;
     font-weight: bold;
+    bottom: 4px;
 }
 /* end header */
 
@@ -120,6 +141,13 @@ p.isi {
     border: 1px solid #FF0088;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.button .btn1:hover,
+.button .btn2:hover {
+    cursor: pointer;
+    background-color: #FF0088;
+    color: #000;
 }
 
 .button .btn2 {
@@ -177,6 +205,11 @@ p.isi {
     border-radius: 50%;
     background-color: gray;
     font-size: 20px;
+    user-select: none;
+}
+
+.page:hover {
+    color: #fff;
 }
 
 .active {
@@ -198,12 +231,22 @@ p.isi {
     margin: 10px 0;
 }
 
+.card .sml {
+    font-size: 45px;
+}
+
 .card button {
     padding: 5px 10px;
     border-radius: 10px;
     border: 3px solid #fff;
      background-color: #000;
      color: #fff;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color: #FF0088;
+    color: #000;
 }
 
 .h2-u {
@@ -255,11 +298,25 @@ p.isi {
     padding: 10px 80px;
     border-radius: 30px;
     border: 1px solid #FF0088;
+    cursor: pointer;
 }
+
+.subscribe:hover {
+    color: #000;
+    svg {
+        fill: #000;
+    }
+}
+
 .subscribe>svg{
     width: 20px;
     margin-right: 10px;
     fill: #fff;
+}
+
+.subscribe span {
+position: relative;
+bottom: 5px;
 }
 /* end content 2 */
 
@@ -302,6 +359,35 @@ footer p {
     text-align: center;
 }
 
+.textc li {
+    padding: 8px 10px 3px;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+.textc li .sosm {
+    width: 25px;
+}
+
+.textc li.bg-s {
+    padding: 7px 8px 0;
+    position: relative;
+    bottom: -3px;
+}
+
+.textc li.yt-li {
+    padding: 8px 10px 1px;
+    position: relative;
+    bottom: -2px;
+}
+
+.textc li:hover {
+    background-color: #FF0088;
+    svg {
+        fill: #000;
+    }
+}
+
 .s {
     font-weight: 500;
     font-size: 20px;
@@ -324,7 +410,7 @@ footer p {
 }
 
 /* for mobile */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
         margin: 0 60px;
     }
