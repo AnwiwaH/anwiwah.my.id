@@ -66,6 +66,15 @@ ul, li{
 
 li {
     margin-left: 35px;
+    cursor: pointer;
+}
+
+li:hover {
+    color: #000;
+    background-color: #FF0088;
+    svg {
+        fill: #000;
+    }
 }
 
 li>svg{
@@ -77,9 +86,16 @@ li>svg{
     width: 50px;
 }
 
+.imgh:hover {
+    opacity: .9;
+    cursor: pointer;
+}
+
 ul li span {
+    position: relative;
     margin-left: 10px;
     font-weight: bold;
+    bottom: 4px;
 }
 /* end header */
 
@@ -120,6 +136,13 @@ p.isi {
     border: 1px solid #FF0088;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+.button .btn1:hover,
+.button .btn2:hover {
+    cursor: pointer;
+    background-color: #FF0088;
+    color: #000;
 }
 
 .button .btn2 {
@@ -179,6 +202,10 @@ p.isi {
     font-size: 20px;
 }
 
+.page:hover {
+    color: #fff;
+}
+
 .active {
     background-color: #FF0088;
     color: white;
@@ -204,6 +231,12 @@ p.isi {
     border: 3px solid #fff;
      background-color: #000;
      color: #fff;
+}
+
+.card button:hover {
+    cursor: pointer;
+    background-color: #FF0088;
+    color: #000;
 }
 
 .h2-u {
@@ -255,11 +288,25 @@ p.isi {
     padding: 10px 80px;
     border-radius: 30px;
     border: 1px solid #FF0088;
+    cursor: pointer;
 }
+
+.subscribe:hover {
+    color: #000;
+    svg {
+        fill: #000;
+    }
+}
+
 .subscribe>svg{
     width: 20px;
     margin-right: 10px;
     fill: #fff;
+}
+
+.subscribe span {
+position: relative;
+bottom: 5px;
 }
 /* end content 2 */
 
@@ -300,6 +347,17 @@ footer p {
 /* row 2 */
 .textc {
     text-align: center;
+}
+
+.textc li .yt {
+    width: 25px;
+}
+
+.textc li:hover {
+    background-color: unset;
+    svg {
+        fill: #FF0088;
+    }
 }
 
 .s {
