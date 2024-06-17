@@ -410,11 +410,15 @@ footer p {
 
 /* for mobile */
 @media (max-width: 600px) {
+    .container {
+        margin: 0 5%;
+    }
+
     .card button {
         margin-left: 13%;
         padding: 5px 50px;
     }
-    
+
     .row-m {
         display: inline-block;
 
@@ -447,7 +451,7 @@ footer p {
 
     .box-img img {
         width: 200px;
-        bottom: -50px;
+        bottom: -80px;
         right: 0;
     }
 
