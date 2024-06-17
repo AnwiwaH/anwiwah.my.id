@@ -48,8 +48,18 @@ a {
     text-decoration: none;
 }
 
+[class*="row"] {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
-    margin: 0 100px;
+    margin: 0 10%;
 }
 
 /* header */
@@ -236,7 +246,8 @@ p.isi {
 }
 
 .card button {
-    padding: 5px 10px;
+    margin-left: 10px;
+    padding: 5px 80px;
     border-radius: 10px;
     border: 3px solid #fff;
      background-color: #000;
@@ -396,33 +407,16 @@ footer p {
 /* end row 2 */
 /* end footer */
 
-/* for dekstop */
-@media (min-width: 768px) {
-    .row {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .column {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 /* for mobile */
 @media (max-width: 600px) {
-    .container {
-        margin: 0 20%;
+    .card button {
+        margin-left: 25%;
+        padding: 5px 10px;
     }
 
-    .rm {
-        display: flex;
-        flex-direction: row;
-    }
+    .row-m {
+        display: inline-block;
 
-    .cm {
-        display: flex;
-        flex-direction: column;
     }
 
     ul li.head {
@@ -452,8 +446,8 @@ footer p {
 
     .box-img img {
         width: 200px;
-        bottom: 60px;
-        right: 5px;
+        bottom: 10%;
+        right: 0;
     }
 
     .mcontent {
