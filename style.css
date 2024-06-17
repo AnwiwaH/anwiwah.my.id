@@ -53,6 +53,10 @@ a {
     flex-direction: row;
 }
 
+.hidden {
+   display: none;
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -211,7 +215,11 @@ p.isi {
     color: black;
 }
 
-.page {
+.page,
+.pagen,
+.pagene,
+.pagep,
+.pagepe {
     padding: 5px 15px;
     border-radius: 50%;
     background-color: gray;
@@ -219,7 +227,12 @@ p.isi {
     user-select: none;
 }
 
-.page:hover {
+.page:hover,
+.pagen:hover,
+.pagene:hover,
+.pagep:hover,
+.pagepe:hover
+ {
     color: #fff;
 }
 
@@ -450,8 +463,8 @@ footer p {
     }
 
     .box-img img {
-        width: 200px;
-        bottom: -80px;
+        width: 150px;
+        bottom: -60px;
         right: 0;
     }
 

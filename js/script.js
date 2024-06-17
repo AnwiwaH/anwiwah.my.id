@@ -1,15 +1,199 @@
 // JS page number
+// page
 const ul = document.querySelector('.ul-page');
-const li = document.querySelectorAll('.page');
+const li = document.querySelectorAll('li');
+
+const mainc = document.querySelector('.mainc');
+
+let active = document.querySelector('.active');
+
 
 ul.addEventListener('click', function(e) {
+    for (let i=0; i<li.length; i++){
+        li[i].classList.remove('active');
+        }
+        // tombol page angka
     if (e.target.className == 'page') {
-        for (let i=0; i<li.length; i++){
-            li[i].classList.remove('active');
-            }
-        e.target.classList.toggle('active');
+        removeChild();
+        addMainc();
+        e.target.classList.add('active');
+        active = document.querySelector('.active');
+        if (active.innerHTML == 7) {
+            active.nextElementSibling.classList.add('hidden');
+            ul.lastElementChild.classList.add('hidden');
+            ul.firstElementChild.nextElementSibling.classList.remove('hidden');
+            ul.firstElementChild.classList.remove('hidden');
+        } else if (active.innerHTML < 7 && active.innerHTML > 1) {
+            ul.lastElementChild.previousElementSibling.classList.remove('hidden');
+            ul.lastElementChild.classList.remove('hidden');
+            ul.firstElementChild.nextElementSibling.classList.remove('hidden');
+            ul.firstElementChild.classList.remove('hidden');
+        } else {
+            ul.lastElementChild.previousElementSibling.classList.remove('hidden');
+            ul.lastElementChild.classList.remove('hidden');
+            ul.firstElementChild.nextElementSibling.classList.add('hidden');
+            ul.firstElementChild.classList.add('hidden');
+        }
+        // tombol next one by one
+    } else if (e.target.className == 'pagen') {
+        removeChild();
+        addMainc();
+        active.nextElementSibling.classList.add('active');
+        active = document.querySelector('.active');
+        if ( active.innerHTML == 7 ) {
+            ul.lastElementChild.previousElementSibling .classList.add('hidden');
+            ul.lastElementChild.classList.add('hidden');
+        } else if (active.innerHTML < 7 && active.innerHTML > 1) {
+            ul.lastElementChild.previousElementSibling.classList.remove('hidden');
+            ul.lastElementChild.classList.remove('hidden');
+            ul.firstElementChild.nextElementSibling.classList.remove('hidden');
+            ul.firstElementChild.classList.remove('hidden');
+        }
+        // tombol prev one by one
+    } else if (e.target.className == 'pagep') {
+        removeChild();
+        addMainc();
+        active.previousElementSibling.classList.add('active');
+        active = document.querySelector('.active');
+        if ( active.innerHTML == 1 ) {
+            ul.firstElementChild.nextElementSibling.classList.add('hidden');
+            ul.firstElementChild.classList.add('hidden');
+        } else if (active.innerHTML < 7 && active.innerHTML > 1) {
+            ul.lastElementChild.previousElementSibling.classList.remove('hidden');
+            ul.lastElementChild.classList.remove('hidden');
+            ul.firstElementChild.nextElementSibling.classList.remove('hidden');
+            ul.firstElementChild.classList.remove('hidden');
+        }
+        // tombol last page
+    } else if (e.target.className == 'pagene') {
+        removeChild();
+        addMainc();
+        active = document.querySelector('.pagen');
+        active.previousElementSibling.classList.add('active');
+        active = document.querySelector('.active');
+        if ( active.innerHTML == 7 ) {
+            ul.lastElementChild.previousElementSibling .classList.add('hidden');
+            ul.lastElementChild.classList.add('hidden');
+            ul.firstElementChild.nextElementSibling.classList.remove('hidden');
+            ul.firstElementChild.classList.remove('hidden');
+        }
+        // tombol first page
+    } else if (e.target.className == 'pagepe') {
+        removeChild();
+        addMainc();
+        active = document.querySelector('.pagep');
+        active.nextElementSibling.classList.add('active');
+        active = document.querySelector('.active');
+        if ( active.innerHTML == 1 ) {
+            ul.lastElementChild.previousElementSibling .classList.remove('hidden');
+            ul.lastElementChild.classList.remove('hidden');
+            ul.firstElementChild.nextElementSibling.classList.add('hidden');
+            ul.firstElementChild.classList.add('hidden');
+        }
     }
 });
+// end page
+
+// remove before page
+
+function removeChild() {
+    
+    let child = mainc.lastElementChild;
+
+        while (child) {
+            mainc.removeChild(child);
+            
+            child = mainc.lastElementChild;
+        }
+}
+// end remove before page
+
+// generate random
+function gRandom(i) {
+    let rdm = Math.floor(Math.random()*10);
+
+    if (i == 'random') {
+        if (rdm < 6) {
+            rdm;
+        } else {
+            rdm = 0;
+        }
+    } else if (i == 'belajar') {
+        if (rdm < 4) {
+            rdm;
+        } else {
+            rdm = 0;
+        }
+    } else {
+        rdm = 0;
+    }
+
+    
+    return rdm;
+}
+// end generate random
+
+// page fill
+let image, belajar, fill;
+
+image = ['<div class="image">html</div>', '<div class="image">css</div>', '<div class="image sml">javascript</div>', '<div class="image">c++</div>', '<div class="image">dart</div>', '<div class="image">golang</div>'];
+
+belajar = ['Dasar', 'Medium', 'Advance', 'Profesional'];
+
+fill = [
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. At atque architecto quibusdam asperiores commodi? Sapiente eveniet quidem in totam est, dolore voluptatibus consectetur. Ea maiores nihil, eum beatae illo reprehenderit?',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam rerum, soluta, amet consectetur illum nihil eveniet ducimus tempore dolorum, voluptatem architecto. Vero culpa quod repudiandae, perspiciatis in eligendi sunt facilis!',
+    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi deleniti excepturi corrupti incidunt veniam, nesciunt quaerat voluptatum ab reprehenderit dolore impedit ex delectus praesentium maxime eligendi pariatur sed officia labore?',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ipsum, quas ut perspiciatis cum libero laborum temporibus explicabo incidunt eum nobis assumenda! Sint dignissimos incidunt neque perferendis temporibus aliquam animi.',
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea corrupti beatae nam porro commodi rerum repellat natus quisquam pariatur dicta, quo atque odit dolorem nostrum ad animi quaerat voluptatum. Non.',
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nulla aliquid vero, sequi optio ab tenetur consequatur fuga asperiores placeat iusto iste corrupti, dolores corporis quis exercitationem vitae praesentium magni?'
+];
+
+function addMainc() {
+    mainc.innerHTML = `
+    <div class="row-m center">
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+            </div>
+            <div class="row-m center">
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+                <div class="column card">
+                    ${image[gRandom('random')]}
+                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
+                    <p>${fill[gRandom('random')]}</p>
+                    <button>Lihat selengkapnya</button>
+                </div>
+            </div>
+    `;
+}
+// end page fill
 // end JS page number
 
 // JS button header
