@@ -91,6 +91,7 @@ ul.addEventListener('click', function(e) {
             ul.firstElementChild.classList.add('hidden');
         }
     }
+    return button = document.querySelectorAll('.card button');
 });
 // end page
 
@@ -243,18 +244,16 @@ box.addEventListener('click', function(e) {
 // end JS button content 1
 
 // JS button main content
-const button = document.querySelectorAll('.card button');
-
-for (i=0; i<button.length; i++) {
-    button[i].addEventListener('click', function() {
+    mainc.addEventListener('click', function(e) {
+        if (e.target.tagName == 'BUTTON') {
         Swal.fire({
             title: 'Mantap!',
             text: 'Tombol Berfungsi..',
             icon: 'success',
             confirmButtonColor: "#007BFF"
         });
+    }
     });
-};
 // end JS button main content
 
 // button subscribe
