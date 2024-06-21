@@ -422,7 +422,7 @@ footer p {
 /* end footer */
 
 /* for mobile */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
     .container {
         margin: 0 5%;
     }
@@ -474,5 +474,12 @@ footer p {
 
     .f-1 h3 {
         font-size: 40px;
+    }
+}
+
+@media(min-width: 670px) and (max-width:1100px) {
+    .box-img img {
+        width: 250px;
+        right: 100px;
     }
 }
