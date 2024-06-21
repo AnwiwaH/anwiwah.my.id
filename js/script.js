@@ -109,31 +109,6 @@ function removeChild() {
 }
 // end remove before page
 
-// generate random
-function gRandom(i) {
-    let rdm = Math.floor(Math.random()*10);
-
-    if (i == 'random') {
-        if (rdm < 6) {
-            rdm;
-        } else {
-            rdm = 0;
-        }
-    } else if (i == 'belajar') {
-        if (rdm < 4) {
-            rdm;
-        } else {
-            rdm = 0;
-        }
-    } else {
-        rdm = 0;
-    }
-
-    
-    return rdm;
-}
-// end generate random
-
 // page fill
 let image, belajar, fill;
 
@@ -151,44 +126,48 @@ fill = [
 ];
 
 function addMainc() {
+    image.sort((a, b) => 0.5 - Math.random());
+    belajar.sort((a, b) => 0.5 - Math.random());
+    fill.sort((a, b) => 0.5 - Math.random());
+    
     mainc.innerHTML = `
     <div class="row-m center">
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[0]}
+                    <h3>Belajar ${belajar[0]}</h3>
+                    <p>${fill[0]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[1]}
+                    <h3>Belajar ${belajar[1]}</h3>
+                    <p>${fill[1]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[2]}
+                    <h3>Belajar ${belajar[2]}</h3>
+                    <p>${fill[2]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
             </div>
             <div class="row-m center">
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[3]}
+                    <h3>Belajar ${belajar[3]}</h3>
+                    <p>${fill[3]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[4]}
+                    <h3>Belajar ${belajar[0]}</h3>
+                    <p>${fill[4]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
                 <div class="column card">
-                    ${image[gRandom('random')]}
-                    <h3>Belajar ${belajar[gRandom('belajar')]}</h3>
-                    <p>${fill[gRandom('random')]}</p>
+                    ${image[5]}
+                    <h3>Belajar ${belajar[1]}</h3>
+                    <p>${fill[5]}</p>
                     <button>Lihat selengkapnya</button>
                 </div>
             </div>
