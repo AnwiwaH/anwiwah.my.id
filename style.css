@@ -48,8 +48,22 @@ a {
     text-decoration: none;
 }
 
+[class*="row"] {
+    display: flex;
+    flex-direction: row;
+}
+
+.hidden {
+   display: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
-    margin: 0 100px;
+    margin: 0 10%;
 }
 
 /* header */
@@ -107,6 +121,7 @@ ul li span {
 /* content 1 */
 .box{
     background-color: #202020;
+    position: relative;
     height: 400px;
     color: #fff;
     padding: 100px 0;   
@@ -159,8 +174,8 @@ p.isi {
 .box-img img {
     width: 450px;
     position: absolute;
-    bottom: 40px;
-    right: 200px;
+    bottom: -100px;
+    right: 180px;
 }
 /* end content 1 */
 
@@ -200,7 +215,11 @@ p.isi {
     color: black;
 }
 
-.page {
+.page,
+.pagen,
+.pagene,
+.pagep,
+.pagepe {
     padding: 5px 15px;
     border-radius: 50%;
     background-color: gray;
@@ -208,7 +227,12 @@ p.isi {
     user-select: none;
 }
 
-.page:hover {
+.page:hover,
+.pagen:hover,
+.pagene:hover,
+.pagep:hover,
+.pagepe:hover
+ {
     color: #fff;
 }
 
@@ -236,7 +260,8 @@ p.isi {
 }
 
 .card button {
-    padding: 5px 10px;
+    margin-left: 10px;
+    padding: 5px 80px;
     border-radius: 10px;
     border: 3px solid #fff;
      background-color: #000;
@@ -396,33 +421,20 @@ footer p {
 /* end row 2 */
 /* end footer */
 
-/* for dekstop */
-@media (min-width: 768px) {
-    .row {
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .column {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 /* for mobile */
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
     .container {
-        margin: 0 60px;
+        margin: 0 5%;
     }
 
-    .rm {
-        display: flex;
-        flex-direction: row;
+    .card button {
+        margin-left: 13%;
+        padding: 5px 50px;
     }
 
-    .cm {
-        display: flex;
-        flex-direction: column;
+    .row-m {
+        display: inline-block;
+
     }
 
     ul li.head {
@@ -451,16 +463,23 @@ footer p {
     }
 
     .box-img img {
-        width: 200px;
-        bottom: 60px;
-        right: 5px;
+        width: 150px;
+        bottom: -60px;
+        right: 0;
     }
 
     .mcontent {
-        margin-top: 120px;
+        margin-top: 25px;
     }
 
     .f-1 h3 {
         font-size: 40px;
+    }
+}
+
+@media(min-width: 670px) and (max-width:1100px) {
+    .box-img img {
+        width: 250px;
+        right: 100px;
     }
 }
