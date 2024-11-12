@@ -10,3 +10,5 @@
 4. Perulangan (Loops) : for, while, do-while.
 5. Fungsi (Functions)
 6. Array
+
+7. comming soon
